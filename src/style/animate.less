@@ -1,0 +1,141 @@
+.zoomIn {
+    animation: zoomIn ease 0.4s;
+    transform-origin: center 50px;
+    // transition: 0.2s;
+}
+
+.fadeIn {
+    animation: fadeIn ease 0.5s;
+    transform-origin: center 50px;
+    // transition: 0.2s;
+}
+
+.swing {
+    animation: aswing ease 0.3s infinite;
+    transform-origin: center 50px;
+}
+
+.scaleOut {
+    animation: scaleOut ease 0.2s;
+}
+
+.rotateIn {
+    animation: rotateIn ease 0.2s;
+}
+
+.leftOut {
+    animation: leftOut ease-in-out 0.2s;
+}
+
+.zoomOut {
+    animation: zoomOut ease-in-out 0.2s;
+}
+
+@keyframes zoomOut {
+
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.1, .1, .1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes leftOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+}
+
+
+@keyframes rotateIn {
+    from {
+        width: 0;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes aswing {
+
+    0% {
+        transform: rotate(0) scale(1)
+    }
+
+    20% {
+        transform: rotate(-2deg) scale(1)
+    }
+
+    60% {
+        transform: rotate(0) scale(1)
+    }
+
+    80% {
+        transform: rotate(2deg) scale(1)
+    }
+
+    100% {
+        transform: rotate(0) scale(1)
+    }
+
+}
+
+@keyframes scaleOut {
+
+    from {
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    to {
+        width: 0;
+        transform-origin: center;
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+// transition 动画
+.el-fade-in-enter-active,
+.el-fade-in-leave-active {
+    transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.el-fade-in-enter,
+.el-fade-in-leave-active {
+    opacity: 0;
+}
+
+.is-animating {
+    transition: transform 580ms cubic-bezier(.41, 1.5, 0.5, 1) 0s !important;
+}

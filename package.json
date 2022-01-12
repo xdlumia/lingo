@@ -1,0 +1,41 @@
+{
+  "name": "lingo",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "cross-env NODE_ENV=web vue-cli-service serve",
+    "dev:web": "cross-env NODE_ENV=web vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:web": "cross-env NODE_ENV=web vue-cli-service",
+    "b": "vue-cli-service build && cross-env NODE_ENV=web vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.9.4",
+    "element-ui": "^2.14.0",
+    "js-base64": "^3.6.0",
+    "vue": "^2.6.12",
+    "vue-clipboard2": "^0.3.1",
+    "vue-swiper": "^0.5.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "global": "^4.4.0",
+    "@vue/cli-plugin-babel": "~4.5.8",
+    "@vue/cli-plugin-router": "~4.5.8",
+    "@vue/cli-service": "~4.5.8",
+    "babel-plugin-component": "^1.1.1",
+    "cross-env": "^7.0.2",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

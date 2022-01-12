@@ -1,0 +1,27 @@
+// slide显示样式
+.range-slider__value {
+  line-height: 20px;
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  margin-left: 4%;
+  padding: 4px 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  background: var(--primary-color);
+
+  &:after {
+    position: absolute;
+    top: 7px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    content: '';
+
+    border-top: 7px solid transparent;
+    border-right: 7px solid var(--primary-color);
+    border-bottom: 7px solid transparent;
+  }
+}
